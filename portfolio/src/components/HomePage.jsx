@@ -73,8 +73,7 @@ const HomePage = ({ onComplete }) => {
  
   return (
     <div ref={container} className="home-screen flex h-screen items-center justify-center relative bg-whitesmoke overflow-hidden">
-    
-    <div className="absolute inset-0 pointer-events-none lumon-grid"></div>
+ <div className="absolute inset-0 pointer-events-none severance-lines"></div>
 
     <div className="flex flex-col items-center text-center gap-4 relative z-10">
       <h1 className="title">

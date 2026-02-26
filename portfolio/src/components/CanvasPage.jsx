@@ -18,9 +18,9 @@ const CanvasPage = () => {
        
         <Lights />
          <Experience />
- <OrbitControls />
+      <OrbitControls />
          <EffectComposer>
-         <Noise blendFunction={BlendFunction.MULTIPLY} opacity={0.5} />
+         <Noise blendFunction={BlendFunction.MULTIPLY} opacity={0.6} />
        
          </EffectComposer>
        </Canvas>
