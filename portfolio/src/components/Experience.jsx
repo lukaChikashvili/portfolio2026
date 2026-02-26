@@ -3,8 +3,9 @@ import React, { useEffect } from 'react'
 import * as THREE from 'three'
 
 const Experience = () => {
-    // office model
+    //  models
     const office = useGLTF('./severance_tv_show_office.glb');
+    const computer = useGLTF('./retro_computer.glb');
 
     useEffect(() => {
         office.scene.traverse((child) => {
@@ -26,6 +27,9 @@ const Experience = () => {
         
     </mesh>
       <primitive object={office.scene} scale = {0.005}  />
+      <primitive object={computer.scene} scale = {0.05} position = {[0.3, 0.23, 0.15]} />
+
+
     </>
   )
 }

@@ -8,6 +8,13 @@
 
     font-size: 12rem;
     color: #48A111;
+    
+    display: block; 
+    overflow: hidden; 
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    
+    
+  
 }
 
 
@@ -17,14 +24,30 @@
     font-family: 'Honest Maria', sans-serif;
 }
 
+
+.lumon-grid {
+    
+    background-image: 
+      url("https://www.transparenttextures.com/patterns/blu-stripes.png"),
+      repeating-linear-gradient(to right, rgba(0, 0, 0, 0.07) 0px, rgba(0, 0, 0, 0.07) 1px, transparent 1px, transparent 200px);
+    background-repeat: repeat;
+    opacity: 0.4; 
+    
+  }
+  
+  .home-screen {
+  
+    background-color: #ECECEC; 
+    opacity: 0.6;
+  }
+
+
+
 .home {
    
     
-    background-image: url("https://www.transparenttextures.com/patterns/blu-stripes.png");
-
-     
-    background-color: whitesmoke;
-    opacity: 0.7;
+   
+    opacity: 0.6;
      border-radius: 16px;
      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
      backdrop-filter: blur(7.4px);

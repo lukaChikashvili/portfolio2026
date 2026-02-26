@@ -20,7 +20,7 @@ const CanvasPage = () => {
          <Experience />
 
          <EffectComposer>
-         <Noise blendFunction={BlendFunction.MULTIPLY} opacity={0.8} />
+         <Noise blendFunction={BlendFunction.MULTIPLY} opacity={0.5} />
        
          </EffectComposer>
        </Canvas>
