@@ -13,6 +13,7 @@ const Experience = () => {
     const frame = useGLTF('./picture_frame.glb');
     const trash = useGLTF('./wireframe_trash_bin.glb');
     let chairRef = useRef();
+    const clock = useGLTF("./bge_clock.glb");
 
 
     const [matcap] = useMatcapTexture('1D2424_565F66_4E555A_646C6E', 256);
@@ -131,6 +132,7 @@ const Experience = () => {
        </mesh>
 
        <primitive object={trash.scene} scale = {0.04} position = {[0.4, 0, 0.26]} />
+       <primitive object={clock.scene} scale = {0.06} position = {[0.049, 0.3, 0.3]} />
     </>
   )
 }

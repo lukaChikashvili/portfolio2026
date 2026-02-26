@@ -36,7 +36,7 @@ const Lights = () => {
         </group>
       </Environment>
       
-      <ambientLight intensity={0.6}  />
+      <ambientLight intensity={0.7}  />
       </>
   )
 }
