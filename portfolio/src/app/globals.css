@@ -1,9 +1,26 @@
+@import url('https://fonts.cdnfonts.com/css/kandira-personal');
 @import "tailwindcss";
 
+
+
+.title {
+    font-family: 'Kandira PERSONAL', sans-serif;
+    font-size: 7rem;
+    color: #48A111;
+}
+
+.slogan {
+
+    font-family: 'Kandira PERSONAL', sans-serif;
+}
+
 .home {
- 
+   
+    
+    background-image: url("https://www.transparenttextures.com/patterns/blu-stripes.png");
+
      
-    background-color: #519A66;
+    background-color: whitesmoke;
     opacity: 0.7;
      border-radius: 16px;
      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);

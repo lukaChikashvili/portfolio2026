@@ -3,7 +3,7 @@ import { Canvas } from "@react-three/fiber"
 import Experience from "./Experience"
 import { OrbitControls } from "@react-three/drei"
 import Lights from "./Lights"
-import { EffectComposer, Noise } from "@react-three/postprocessing"
+import { EffectComposer, Noise, Vignette } from "@react-three/postprocessing"
 import { BlendFunction } from "postprocessing"
 
 const CanvasPage = () => {
@@ -21,6 +21,7 @@ const CanvasPage = () => {
 
          <EffectComposer>
          <Noise blendFunction={BlendFunction.MULTIPLY} opacity={0.8} />
+       
          </EffectComposer>
        </Canvas>
      </>
