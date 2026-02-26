@@ -31,14 +31,14 @@
       url("https://www.transparenttextures.com/patterns/blu-stripes.png"),
       repeating-linear-gradient(to right, rgba(0, 0, 0, 0.07) 0px, rgba(0, 0, 0, 0.07) 1px, transparent 1px, transparent 200px);
     background-repeat: repeat;
-    opacity: 0.4; 
+    opacity: 0.7; 
     
   }
   
   .home-screen {
   
     background-color: #ECECEC; 
-    opacity: 0.6;
+    opacity: 0.7;
   }
 
 

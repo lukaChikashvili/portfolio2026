@@ -1,5 +1,5 @@
 import { UserContext } from '@/context/UserContext';
-import { useGLTF, useTexture } from '@react-three/drei'
+import { useGLTF, useMatcapTexture, useTexture } from '@react-three/drei'
 import { useThree } from '@react-three/fiber';
 import React, { useContext, useEffect } from 'react'
 import * as THREE from 'three'
@@ -10,6 +10,13 @@ const Experience = () => {
     const office = useGLTF('./severance_tv_show_office.glb');
     const computer = useGLTF('./retro_computer.glb');
     const chair = useGLTF('./office_chair.glb');
+    const frame = useGLTF('./picture_frame.glb');
+
+    const [matcap] = useMatcapTexture('1D2424_565F66_4E555A_646C6E', 256);
+
+    const me = useTexture('./profile.png');
+
+
 
 
     useEffect(() => {
@@ -19,8 +26,22 @@ const Experience = () => {
             }
         });
 
+        frame.scene.traverse((child) => {
+           
+            if (child.isMesh) { 
+                child.material = new THREE.MeshMatcapMaterial({
+                    matcap: matcap,
+                  
+                    color: new THREE.Color('#ffffff') 
+                });
+                
+               
+                child.material.needsUpdate = true;
+            }
+        });
+
       
-    }, [office]);
+    }, [office, frame, matcap]);
 
 
     const { start } = useContext(UserContext);
@@ -61,6 +82,13 @@ const Experience = () => {
 
       <primitive object={chair.scene} scale = {0.0025} rotation = {[0, 2, 0]}
        position = {[0.18, 0, 0.3]} />
+
+      
+       <primitive object={frame.scene} rotation = {[0, -0.9, 0]}  scale = {0.01} position = {[0.15, 0.2, 0.1]}  />
+       <mesh  rotation = {[-0.38, 0.61, 0.24]} position = {[0.152, 0.225, 0.101]}>
+        <planeGeometry args = {[0.045, 0.045]} />
+        <meshBasicMaterial map = {me} />
+       </mesh>
     </>
   )
 }
