@@ -1,13 +1,17 @@
 "use client"
-import React, { useRef } from 'react'
+import React, { useContext, useRef } from 'react'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react';
 import SplitType from 'split-type';
+import { UserContext } from '@/context/UserContext';
 
 gsap.registerPlugin(useGSAP);
 
 const HomePage = ({ onComplete }) => {
   const container = useRef();
+
+  const { setStart } = useContext(UserContext);
+
 
   useGSAP(() => {
    
@@ -62,6 +66,8 @@ const HomePage = ({ onComplete }) => {
       duration: 1,
       ease: "power2.inOut"
     }, "-=0.4");
+
+   setStart(true);
   };
 
  
