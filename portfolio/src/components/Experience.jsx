@@ -9,13 +9,17 @@ const Experience = () => {
     //  models
     const office = useGLTF('./severance_tv_show_office.glb');
     const computer = useGLTF('./retro_computer.glb');
+    const chair = useGLTF('./office_chair.glb');
+
 
     useEffect(() => {
         office.scene.traverse((child) => {
             if(child.name === "Object_38") {
                 child.visible = false;
             }
-        })
+        });
+
+      
     }, [office]);
 
 
@@ -29,7 +33,7 @@ const Experience = () => {
         if (start) {
           gsap.to(camera.position, {
             x: 0.65,
-            y: 0.40,
+            y: 0.35,
             z: 0.64,
             duration: 2,
             delay: 1.5,
@@ -55,7 +59,8 @@ const Experience = () => {
       <primitive object={office.scene} scale = {0.005} position = {[0, -0.03, 0]}  />
       <primitive object={computer.scene} scale = {0.05} position = {[0.3, 0.20, 0.15]} />
 
-
+      <primitive object={chair.scene} scale = {0.0025} rotation = {[0, 2, 0]}
+       position = {[0.18, 0, 0.3]} />
     </>
   )
 }
